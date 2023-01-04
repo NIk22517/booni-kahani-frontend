@@ -11,7 +11,7 @@ const ContactUs = () => {
       </header>
 
       <section>
-        <article>
+        <article className='left'>
           <h1>Send us a Message</h1>
 
           <form action=''>
@@ -27,7 +27,7 @@ const ContactUs = () => {
             ></textarea>
           </form>
         </article>
-        <article>
+        <article className='rigth'>
           <h1>Contact Information</h1>
 
           <p>
@@ -73,13 +73,31 @@ const ContactUsStyle = styled.main`
 
   section {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
   }
 
   form {
     display: flex;
     flex-direction: column;
+
+    input {
+      outline: none;
+      border: none;
+      border-bottom: 2px solid black;
+    }
+    textarea {
+      border: none;
+      border-bottom: 2px solid black;
+    }
+  }
+
+  .left {
+    background-color: #ffffff;
+    padding: 2rem;
+  }
+  .rigth {
+    background-color: #221818;
+    color: white;
+    padding: 2rem;
   }
 `;
